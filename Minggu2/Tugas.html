@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas Form</title>
+</head>
+<body>
+    <form>
+        <table>
+            <tr>
+                <td>Nama</td>
+                <td> <input type="text" name="nama" value="Romi"readonly ></td>
+            </tr>
+            
+            <tr>
+                <td>Username</td>
+                <td> <input type="text" name="username" value="romi" maxlength="5"></td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td> <input type="password" name="password" value="romi123" disabled></td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td> <input type="email" name="email" value="romi@gmail.com" required></td>
+            </tr>
+            <tr>
+                <td>NIM</td>
+                <td> <input type="text" name="nim" maxlength="9" pattern="[a-z0-9]+" title="Hanya boleh memasukkan huruf kecil dan angka"></td>
+            </tr>
+            <tr>
+                <td> <input type="submit" value="Simpan"> </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

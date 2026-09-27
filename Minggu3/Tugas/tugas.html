@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas</title>
+    <link rel="stylesheet" href="tugas.css">
+</head>
+<body>
+    <!-- <marquee behavior="scroll" direction="left">Free Registration &nbsp; Free Registration &nbsp; Free Registration</marquee>
+    <marquee behavior="scroll" direction="left"><h2>Free Registration</h2></marquee> -->
+    <form action="proses.php" method="post" name="form">
+        <h2>Free Registration</h2>
+        <table>
+            <tr>
+                <td class="kolom1">Nama</td>
+                <td class="kolom2">:</td>
+                <td class="kolom3">
+                    <input type="text" name="txtNama" id="txtNama">
+                </td>
+            </tr>
+            <tr>
+                <td class="kolom1">Tgl Lahir</td>
+                <td class="kolom2">:</td>
+                <td class="kolom3">
+                    <input type="text" name="txtTgl" id="txtTgl" maxlength="2" placeholder="Tgl">
+                    /
+                    <input type="text" name="txtBulan" id="txtBulan" maxlength="2" placeholder="Bln">
+                    /
+                    <input type="text" name="txtTahun" id="txtTahun" maxlength="4" placeholder="Tahun">
+                </td>
+            </tr>
+            <tr>
+                <td class="kolom1">Alamat</td>
+                <td class="kolom2">:</td>
+                <td class="kolom3">
+                    <textarea name="txtAlamat" id="txtAlamat"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td class="kolom1">Kota</td>
+                <td class="kolom2">:</td>
+                <td class="kolom3"><input type="text" name="txtKota" id="txtKota"></td>
+            </tr>
+        </table>
+        <div class="tombol">
+            <input type="reset" value="Cancel" name="btnCancel" id="btnCancel">
+            <input type="submit" value="Kirim" name="btnKirim" id="btnKirim">
+        </div>
+    </form>
+</body>
+</html>

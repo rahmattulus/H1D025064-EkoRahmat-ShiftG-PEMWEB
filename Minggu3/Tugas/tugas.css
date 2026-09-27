@@ -1,0 +1,64 @@
+body{
+    font-family: 'Segoe UI';
+    background: rgb(232, 233, 232);
+}
+
+h2{
+    text-align: center;
+    font-weight: normal;
+}
+
+form{
+    margin: 5% auto;
+    background: white;
+    width: 60%;
+    border-top: solid slateblue 4px;
+    border-radius: 1rem;
+    padding-bottom: 3%;
+}
+
+table{
+    margin: 0 auto;
+    padding: 5px;
+    /* width: 50%; */
+    /* border-top: solid; */
+    /* border-color: rgb(34, 49, 213); */
+    /* align-content: center; */
+}
+
+input, input:focus{
+    border: 0px;
+    border-bottom: solid rgb(79, 78, 78) 1px;
+    outline: none;
+    margin-bottom: 5px;
+}
+
+.kolom1{
+    font-weight: 500;
+    width: 20%;
+}
+.kolom2{width: 5%;}
+/* .kolom3{max-width: 200px;} */
+
+.tombol{display: flex; justify-content: center; gap: 15px; margin-top: 5px;}
+.tombol input{
+    width: 40%;
+    border: none;
+    color: aliceblue;
+    padding: 5px 3px;
+    border-radius: 5px;
+}
+#btnKirim{
+    background-color: blue;
+}
+#btnCancel{
+    background-color: red;
+}
+
+#txtTgl, #txtBulan{width: 24px;}
+#txtTahun {width: 77px;}
+/* #txtNama, #txtKota{width: 186px;}
+#txtAlamat{
+    width: 200px;
+    height: 42px;
+} */

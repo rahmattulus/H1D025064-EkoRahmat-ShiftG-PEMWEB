@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan - Validasi Form</title>
+</head>
+
+<body>
+    <form method="post" onsubmit="return validasi()">
+        <table>
+            <tr>
+                <td>Nama :</td>
+                <td>
+                    <input type="text" name="nama" id="txtNama">
+                </td>
+            </tr>
+            <tr>
+                <td>Email :</td>
+                <td>
+                    <input type="email" name="email" id="txtEmail">
+                </td>
+            </tr>
+            <tr>
+                <td>Komentar</td>
+                <td><textarea name="" id="txtKomen"></textarea></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Simpan"></td>
+            </tr>
+        </table>
+    </form>
+    <script>
+        const txtnama = document.getElementById("txtNama")
+        const txtemail = document.getElementById("txtEmail")
+        const txtkomen = document.getElementById("txtKomen")
+
+        
+
+        function validasi() {
+            if (txtnama.value=="" || txtemail.value=="" || txtkomen.value =="") {
+                alert("Di isi woyy gaboleh kosong!!")
+                return false
+            } 
+            if (!/^[a-zA-Z\s]+$/.test(txtnama.value)) {
+                alert("Nama gaboleh diisi angka dan karakter")
+                txtnama.focus()
+                return false
+            }
+            alert("Data berhasil disimpan")
+            return true
+        }
+    </script>
+</body>
+
+</html>

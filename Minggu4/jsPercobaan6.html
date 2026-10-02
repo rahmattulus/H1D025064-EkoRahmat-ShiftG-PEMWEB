@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modul 4-Character Counter</title>
+</head>
+<body>
+    <form name="form1" method="post">
+        <textarea id="question" name="question" onkeyup="countMax()"></textarea>
+        Sisa <input type="text" name="counter" id="counter" size="3" maxlength="3" value="100" readonly>
+    </form>
+    <script>
+        function countMax(){
+            const question = document.getElementById("question")
+            const counter = document.getElementById("counter")
+            const max = 100
+            let werk = max - question.value.length
+            if (werk < 0) {
+                alert("Batas maksimum pengisisan adalah "+max+" karakter")
+                question.value= question.value.substring(0, max)
+                werk = max - question.value.length
+                counter.value = werk
+            }else{
+                counter.value = werk
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas 2 - JS</title>
+</head>
+
+<body>
+    <h2>Kalkulator</h2>
+    <form>
+        <input type="number" id="angka1" placeholder="Angka ke-1" required>
+        <input type="number" id="angka2" placeholder="Angka ke-2" required>
+        <div>
+            <button type="button" onclick="hitung('+')">+</button>
+            <button type="button" onclick="hitung('-')">-</button>
+            <button type="button" onclick="hitung('*')">×</button>
+            <button type="button" onclick="hitung('/')">÷</button>
+        </div>
+    </form>
+
+    <div id="hasil">
+        Hasil: -
+    </div>
+
+    <script>
+        function hitung(operator) {
+            const num1 = Number(document.getElementById("angka1").value);
+            const num2 = Number(document.getElementById("angka2").value);
+            const elemHasil = document.getElementById("hasil");
+            let hasil = 0
+
+            switch (operator) {
+                case '+':
+                    hasil = num1 + num2;
+                    break;
+                case '-':
+                    hasil = num1 - num2;
+                    break;
+                case '*':
+                    hasil = num1 * num2;
+                    break;
+                case '/':
+                    if (num2 === 0) {
+                        elemHasil.innerText = "Error: Tidak bisa dibagi 0!";
+                        return;
+                    }
+                    hasil = num1 / num2;
+                    break;
+            }
+
+            elemHasil.innerText = `Hasil: ${hasil}`;
+        }
+    </script>
+</body>
+
+</html>

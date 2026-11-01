@@ -14,5 +14,24 @@ create table `posts`(
     `konten` varchar(1000),
     primary key (`id`)
 );
+create table `barang`(
+    `id` int(11) not null auto_increment,
+    `nama_brg` varchar(100),
+    `harga` varchar(100),
+    primary key (`id`)
+);
+create table `pembeli`(
+    `id` int(11) not null auto_increment,
+    `nama` varchar(100),
+    `no_hp` varchar(100),
+    `alamat` varchar(1000),
+    primary key (`id`)
+);
+create table `kurir`(
+    `id` int(11) not null auto_increment,
+    `nama_kurir` varchar(100),
+    `no_hp` varchar(100),
+    primary key (`id`)
+);
 
 

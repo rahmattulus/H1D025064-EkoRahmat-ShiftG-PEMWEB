@@ -59,14 +59,14 @@ $result = mysqli_query($koneksi, $query);
 </head>
 
 <body>
-    <h3>Data Barang, Pembeli, dan Kurir (Berdasarkan ID Sama)</h3>
+    <h3>List Pesanan</h3>
     <nav>
-        <a href="barang/index.php"><button>Kelola Barang</button></a>
-        <a href="pembeli/index.php"><button>Kelola Pembeli</button></a>
-        <a href="kurir/index.php"><button>Kelola Kurir</button></a>
+        <a href="barang.php"><button>Kelola Barang</button></a>
+        <a href="pembeli.php"><button>Kelola Pembeli</button></a>
+        <a href="kurir.php"><button>Kelola Kurir</button></a>
     </nav>
-
-    <table border="1">
+    <br><br>
+    <table border="1" cellspacing="0" cellpadding="5">
         <thead>
             <tr>
                 <th>ID</th>

@@ -25,10 +25,13 @@ if (isset($_GET['hapus'])) {
     header("Location: barang.php");
 }
 
+// Ambil semua data barang
+$read = mysqli_query($koneksi, "SELECT * FROM barang ORDER BY id");
+
 // Ambil data untuk form edit
-$id = '';
-$nama_brg = '';
-$harga = '';
+// $id = '';
+// $nama_brg = '';
+// $harga = '';
 if (isset($_GET['edit'])) {
     $id = $_GET['edit'];
     $query = mysqli_query($koneksi, "SELECT * FROM barang WHERE id=$id");
@@ -38,8 +41,6 @@ if (isset($_GET['edit'])) {
     }
 }
 
-// Ambil semua data barang
-$read = mysqli_query($koneksi, "SELECT * FROM barang ORDER BY id");
 ?>
 
 <!DOCTYPE html>
@@ -60,11 +61,11 @@ $read = mysqli_query($koneksi, "SELECT * FROM barang ORDER BY id");
         <table>
             <tr>
                 <td>Nama Barang</td>
-                <td><input type="text" name="nama_brg" value="<?= $nama_brg; ?>"></td>
+                <td><input type="text" name="nama_brg" value="<?= $nama_brg ?? ""; ?>"></td>
             </tr>
             <tr>
                 <td>Harga</td>
-                <td><input type="text" name="harga" value="<?= $harga; ?>"></td>
+                <td><input type="text" name="harga" value="<?= $harga ?? ""; ?>"></td>
             </tr>
             <tr>
                 <input type="hidden" name="id" value="<?= $id; ?>">
